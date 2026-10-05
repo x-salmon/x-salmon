@@ -1,0 +1,25 @@
+# Copies your Shellby card into this repo so your profile README can show it.
+# Shellby updates the gist; this picks it up every six hours.
+name: Shellby card
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the crab
+        run: |
+          curl -fsSL "https://gist.githubusercontent.com/x-salmon/76ad90cbf209ee1db59de3edad7008ca/raw/shellby-profile.svg?t=$(date +%s)" -o shellby-profile.svg.new
+          head -c 300 shellby-profile.svg.new | grep -q '<svg' || { echo "Not an SVG"; exit 1; }
+          mv shellby-profile.svg.new shellby-profile.svg
+      - name: Commit if he changed
+        run: |
+          git add shellby-profile.svg
+          git diff --cached --quiet && exit 0
+          git -c user.name="shellby-card[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "chore: update Shellby card"
+          git push
