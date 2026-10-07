@@ -29,7 +29,7 @@
 <text x="196" y="38" class="mono" font-size="11" font-weight="600" letter-spacing="1" fill="#ff7a5c">@X-SALMON&#8217;S SHELLBY</text>
 <text x="196" y="72" class="sans" fill="#f3e6cc"><tspan font-size="28" font-weight="700">Lv 32</tspan><tspan dx="10" font-size="16" fill="#b3a892">Reef Warden</tspan></text>
 <rect x="196" y="82" width="264" height="5" rx="2.5" fill="#7fd6c2" fill-opacity=".15"/>
-<rect x="196" y="82" width="103" height="5" rx="2.5" fill="#7fd6c2"/>
+<rect x="196" y="82" width="207" height="5" rx="2.5" fill="#7fd6c2"/>
 <text x="196" y="110" class="sans" font-size="14" fill="#ffc15e">&#128293; 7-day streak</text>
 <text x="460" y="110" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#7fd6c2">Bugdex 2/66</text>
 <text x="196" y="134" class="mono" font-size="10" font-weight="600" letter-spacing="1" fill="#7d7566">LATEST STICKERS</text>
